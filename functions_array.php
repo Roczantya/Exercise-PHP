@@ -17,8 +17,7 @@
         $person->displayGender();
         $person->displayGPA();
         $person->displayStudentStatus();
-
-        echo "Status: " . isAdult($person) . "\n"; // Mengeluarkan status
+        displayAgeStatus($person);
         echo "\n";
     }
 ?>
