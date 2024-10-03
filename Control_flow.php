@@ -11,10 +11,9 @@ function displayAgeStatus($person) {
     // Menampilkan usia dan status dewasa atau minor
     echo "Age: $age years\n";
     if ($age >= 18) {
-        echo "Status: You are Adult know\n"; // Jika sudah dewasa
+        echo "Status: Adult. Congrats\n"; // Jika sudah dewasa
     } else {
-        echo "Status: You are still Minorr\n"; // Jika belum dewasa
+        echo "Status: Minor. Don't be naughty\n"; // Jika belum dewasa
     }
 }
-
     ?>
