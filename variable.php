@@ -93,5 +93,12 @@ class Person {
     public function displayStudentStatus() {
         echo "Beliau memang " . ($this->getIsStudent() ? 'seorang mahasiswa.' : 'bukan mahasiswa.') . "\n";
     }
+
+    public function isAdult() {
+        $tgl_lahir = new DateTime($this->birthdate);
+        $hariini = new DateTime('today');
+        $age = $tgl_lahir->diff($hariini);
+        return $age->y >= 18; // Mengembalikan true jika dewasa, false jika tidak
+    }
 }
 ?>
