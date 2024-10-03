@@ -9,7 +9,6 @@ function displayAgeStatus($person) {
     $age = hitungUsia($person->getBirthdate()); // Menghitung usia menggunakan fungsi terpisah
 
     // Menampilkan usia dan status dewasa atau minor
-    echo "Age: $age years\n";
     if ($age >= 18) {
         echo "Status: Adult. Congrats\n"; // Jika sudah dewasa
     } else {
