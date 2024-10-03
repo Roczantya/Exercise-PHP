@@ -18,11 +18,7 @@
         $person->displayGPA();
         $person->displayStudentStatus();
 
-        if (isAdult($person)) {
-            echo "Status: Sudah dewasa\n"; // Jika sudah dewasa
-        } else {
-            echo "Status: Belum dewasa\n"; // Jika belum dewasa
-        }
-        echo "\n"; // Memberi jarak antar informasi
+        echo "Status: " . isAdult($person) . "\n"; // Mengeluarkan status
+        echo "\n";
     }
 ?>
