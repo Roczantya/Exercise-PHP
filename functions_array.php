@@ -1,6 +1,6 @@
 <?php 
     include 'variable.php'; // Menyertakan file variable.php
-
+    include 'Control_flow.php';
     // Membuat objek Person berdasarkan array siswa
     $people = [];
     
@@ -18,7 +18,7 @@
         $person->displayGPA();
         $person->displayStudentStatus();
 
-        if ($person->isAdult()) {
+        if (isAdult($person)) {
             echo "Status: Sudah dewasa\n"; // Jika sudah dewasa
         } else {
             echo "Status: Belum dewasa\n"; // Jika belum dewasa
