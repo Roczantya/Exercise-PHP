@@ -1,11 +1,11 @@
 <?php
 class Person {
     // Properti atau atribut
-    public $name;
-    public $birthdate;
-    public $gender;
-    public $GPAScore;
-    public $is_student;
+    private $name;
+    private $birthdate;
+    private $gender;
+    private $GPAScore;
+    private $is_student;
 
     // Constructor untuk menginisialisasi objek
     public function __construct($name, $birthdate, $gender, $GPAScore, $is_student) {
@@ -16,9 +16,59 @@ class Person {
         $this->is_student = $is_student;
     }
 
+    // Getter untuk nama
+    public function getName() {
+        return $this->name;
+    }
+
+    // Setter untuk nama
+    public function setName($name) {
+        $this->name = $name;
+    }
+
+    // Getter untuk tanggal lahir
+    public function getBirthdate() {
+        return $this->birthdate;
+    }
+
+    // Setter untuk tanggal lahir
+    public function setBirthdate($birthdate) {
+        $this->birthdate = $birthdate;
+    }
+
+    // Getter untuk gender
+    public function getGender() {
+        return $this->gender;
+    }
+
+    // Setter untuk gender
+    public function setGender($gender) {
+        $this->gender = $gender;
+    }
+
+    // Getter untuk GPA
+    public function getGPAScore() {
+        return $this->GPAScore;
+    }
+
+    // Setter untuk GPA
+    public function setGPAScore($GPAScore) {
+        $this->GPAScore = $GPAScore;
+    }
+
+    // Getter untuk status mahasiswa
+    public function getIsStudent() {
+        return $this->is_student;
+    }
+
+    // Setter untuk status mahasiswa
+    public function setIsStudent($is_student) {
+        $this->is_student = $is_student;
+    }
+
     // Method untuk menampilkan nama
     public function displayName() {
-        echo "Nama saya " . $this->name . "\n";
+        echo "Nama saya " . $this->getName() . "\n";
     }
 
     // Method untuk menghitung dan menampilkan umur
@@ -31,28 +81,17 @@ class Person {
 
     // Method untuk menampilkan gender
     public function displayGender() {
-        echo "Gender saya " . $this->gender . "\n";
+        echo "Gender saya " . $this->getGender() . "\n";
     }
 
     // Method untuk menampilkan GPA
     public function displayGPA() {
-        echo "GPA saya " . $this->GPAScore . "\n";
+        echo "GPA saya " . $this->getGPAScore() . "\n";
     }
 
     // Method untuk menampilkan status mahasiswa
     public function displayStudentStatus() {
-        echo "Beliau memang " . ($this->is_student ? 'seorang mahasiswa.' : 'bukan mahasiswa.') . "\n";
+        echo "Beliau memang " . ($this->getIsStudent() ? 'seorang mahasiswa.' : 'bukan mahasiswa.') . "\n";
     }
 }
-
-// Membuat objek Person
-$person = new Person('Tiffany Tjandinegara', '2005-04-01', 'female', 3.73, true);
-
-// Memanggil method untuk menampilkan informasi
-$person->displayName();
-$person->displayAge();
-$person->displayGender();
-$person->displayGPA();
-$person->displayStudentStatus();
-
 ?>
