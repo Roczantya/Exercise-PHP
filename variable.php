@@ -68,32 +68,31 @@ class Person {
 
     // Method untuk menampilkan nama
     public function displayName() {
-        echo "Nama saya " . $this->getName() . "\n";
+        echo "<h2>Name: " . htmlspecialchars($this->name) . "</h2>";
     }
 
-    // Method untuk menghitung dan menampilkan umur
     public function displayAge() {
-        $tgl_lahir = new DateTime($this->birthdate); // Membuat objek DateTime dari tanggal lahir
-        $hariini = new DateTime('today'); // Membuat objek DateTime untuk hari ini
-        $age = $tgl_lahir->diff($hariini); // Menghitung selisih tahun (umur)
-        echo "Usia: " . $age->y . " tahun, " . $age->m . " bulan, " . $age->d . " hari\n"; // Menampilkan umur
+        $age = $this->calculateAge();
+        echo "<p>Age: " . htmlspecialchars($age) . "</p>";
     }
 
-    // Method untuk menampilkan gender
     public function displayGender() {
-        echo "Gender saya " . $this->getGender() . "\n";
+        echo "<p>Gender: " . htmlspecialchars($this->gender) . "</p>";
     }
 
-    // Method untuk menampilkan GPA
     public function displayGPA() {
-        echo "GPA saya " . $this->getGPAScore() . "\n";
+        echo "<p>GPA: " . htmlspecialchars($this->gpa) . "</p>";
     }
 
-    // Method untuk menampilkan status mahasiswa
     public function displayStudentStatus() {
-        echo "Beliau memang " . ($this->getIsStudent() ? 'seorang mahasiswa.' : 'bukan mahasiswa.') . "\n";
+        echo "<p>Student Status: " . ($this->isStudent ? "Active" : "Inactive") . "</p>";
     }
 
-    
+    private function calculateAge() {
+        $birthdate = new DateTime($this->birthdate);
+        $today = new DateTime();
+        return $today->diff($birthdate)->y; // Calculate age in years
+    }
 }
+    
 ?>
