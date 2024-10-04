@@ -1,21 +1,15 @@
 <?php
-include 'variable.php'; // Menyertakan file variable.php
+include 'variable.php'; // Menyertakan file Data_people.php
 
 function hitungUsia($tanggal_lahir) {
-    $tgl_lahir = new DateTime($tanggal_lahir); // Mendapatkan tanggal lahir dari parameter
-    $hari_ini = new DateTime('today'); // Membuat objek DateTime untuk hari ini
+    $tgl_lahir = new DateTime($tanggal_lahir);
+    $hari_ini = new DateTime('today');
     return $tgl_lahir->diff($hari_ini)->y; // Mengembalikan usia dalam tahun
 }
 
 function displayAgeStatus($person) {
-    $age = hitungUsia($person->getBirthdate()); // Hitung usia menggunakan fungsi terpisah
-
-    // Menampilkan status dewasa atau minor
-    if ($age >= 18) {
-        return "Status: Adult. Congrats"; // Jika sudah dewasa
-    } else {
-        return "Status: Minor. Don't be naughty"; // Jika masih minor
-    }
+    $age = hitungUsia($person->getBirthdate());
+    return ($age >= 18) ? "Status: Adult. Congrats" : "Status: Minor. Don't be naughty";
 }
 
 // Mulai dokumen HTML
@@ -37,9 +31,9 @@ echo "<!DOCTYPE html>
 // Loop melalui setiap objek Person dan menampilkan status usia mereka
 foreach ($people as $person) {
     echo "<div class='person'>";
-    echo "<h2>" . $person->getName() . "</h2>"; // Menampilkan nama
-    echo "<p>" . displayAgeStatus($person) . "</p>"; // Menampilkan status usia
-    echo "</div>"; // Menutup div untuk orang
+    echo "<h2>" . $person->getName() . "</h2>";
+    echo "<p>" . displayAgeStatus($person) . "</p>";
+    echo "</div>";
 }
 
 echo "</body>
