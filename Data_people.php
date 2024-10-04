@@ -12,7 +12,7 @@ echo "<!DOCTYPE html>
     <title>People Information</title>
     <style>
         body { font-family: Arial, sans-serif; }
-        .person { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        .person { margin-bottom: 20px; padding: 10px; border: 1.5px solid #ccc; border-radius: 5px; }
         h2 { color: #4CAF50; }
     </style>
 </head>

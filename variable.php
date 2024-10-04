@@ -59,11 +59,11 @@ class Person {
 }
 
 $people = [];
-$people[] = new Person('Tiffany', '2005-04-01', 'female', 3.73, true);
-$people[] = new Person('Nina', '2007-05-15', 'female', 0.0, true);
-$people[] = new Person('Tania', '2009-06-10', 'female', 0.0, false);
-$people[] = new Person('Budi', '2003-07-20', 'male', 3.80, true);
-$people[] = new Person('Santika', '2003-09-15', 'female', 3.99, true);
+$people[] = new Person('Tiffany', '2005-04-01', 'Female', 3.73, true);
+$people[] = new Person('Nina', '2007-05-15', 'Female', 0.0, true);
+$people[] = new Person('Tania', '2009-06-10', 'Female', 0.0, false);
+$people[] = new Person('Budi', '2003-07-20', 'Male', 3.80, true);
+$people[] = new Person('Santika', '2003-09-15', 'Female', 3.99, true);
 
 foreach ($people as $person) {
     $person->displayName();
