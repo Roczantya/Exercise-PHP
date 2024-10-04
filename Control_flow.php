@@ -18,14 +18,6 @@ function displayAgeStatus($person) {
     }
 }
 
-// Membuat array objek Person
-$people = [];
-$people[] = new Person('Tiffany', '2005-04-01', 'female', 3.73, true);
-$people[] = new Person('Nina', '2007-05-15', 'female', 3.85, true);
-$people[] = new Person('Tania', '2009-06-10', 'female', 3.65, false);
-$people[] = new Person('Budi', '2003-07-20', 'male', 3.80, true);
-$people[] = new Person('Mike', '2002-08-25', 'male', 3.90, true);
-
 // Mulai dokumen HTML
 echo "<!DOCTYPE html>
 <html lang='en'>
