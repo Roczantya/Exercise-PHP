@@ -11,7 +11,7 @@ echo "<!DOCTYPE html>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>People Information</title>
     <style>
-        body { font-family: Arial, sans-serif; }
+        body { font-family: rial, Helvetica, sans-serif; }
         .person { margin-bottom: 20px; padding: 10px; border: 1.5px solid #ccc; border-radius: 5px; }
         h2 { color: #4CAF50; }
     </style>
