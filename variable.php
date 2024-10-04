@@ -35,7 +35,7 @@ class Person {
 
     // Display methods
     public function displayName() {
-        return "Nama saya " . $this->getName() . "<br>";
+        return "Nama: " . $this->getName() . "<br>";
     }
 
     public function displayAge() {
@@ -46,11 +46,11 @@ class Person {
     }
 
     public function displayGender() {
-        return "Gender saya " . $this->getGender() . "<br>";
+        return "Gender: " . $this->getGender() . "<br>";
     }
 
     public function displayGPA() {
-        return "GPA saya " . $this->getGPAScore() . "<br>";
+        return "GPA: " . $this->getGPAScore() . "<br>";
     }
 
     public function displayStudentStatus() {

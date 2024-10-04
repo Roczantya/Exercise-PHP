@@ -1,5 +1,5 @@
 <?php
-include 'Data_people.php'; // Menyertakan file Data_people.php
+include 'variable.php'; // Menyertakan file Data_people.php
 
 ob_start(); // Memulai output buffering
 
